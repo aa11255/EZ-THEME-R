@@ -2,9 +2,9 @@
 set -e
 
 COMMON_REMOTE=ez-theme
-COMMON_URL=https://github.com/codeman857/EZ-Theme.git
+COMMON_URL=https://github.com/codeman857/EZ-Theme-R.git
 COMMON_BRANCH=master
-PRIVATE_BRANCH=master
+PRIVATE_BRANCH=main
 
 echo "🚀 确认远端是否存在..."
 if ! git remote | grep -q "^$COMMON_REMOTE$"; then
