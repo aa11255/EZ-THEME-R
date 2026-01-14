@@ -7,7 +7,7 @@ import { buyConfirm, getAppLink, getThemeColor, shopPopup, ticketPopup, userKnow
 
 export const config = {
     // 面板类型配置 - 请选择您使用的面板类型
-    PANEL_TYPE: 'Xiao-V2board', // 可选值: 'V2board', 'Xiao-V2board' 或 'Xboard'
+    PANEL_TYPE: 'Xboard', // 可选值: 'V2board', 'Xiao-V2board' 或 'Xboard'
     // 说明:
     // 1. V2board: 标准V2board面板，使用默认请求格式
     // 2. Xiao-V2board: Xiao修改版面板，使用特殊格式的请求参数
@@ -29,7 +29,11 @@ export const config = {
         // 静态URL模式下的基础URL (urlMode = 'static'时使用)
         // 支持字符串形式(单个API地址)或数组形式(多个备选API地址)
         // 多个地址时，会按顺序检测可用性，并使用第一个可用的地址
-        staticBaseUrl: [],
+            staticBaseUrl: [
+              'https://www.pandan.club/api/v1',
+              'https://blog.pandan.club/api/v1',
+              'https://shop.pandan.club/api/v1'
+           ],
 
         // 自动获取模式配置 (urlMode = 'auto'时使用)
         autoConfig: {
@@ -46,11 +50,11 @@ export const config = {
 
     // 是否启用中间件代理API请求
     // 设置为true时，所有API请求将通过中间件转发
-    API_MIDDLEWARE_ENABLED: true,
+    API_MIDDLEWARE_ENABLED: false,
 
     //=======================================================
     // 中间件服务器URL (不含路径) 开源地址 https://github.com/codeman857/EZ-Encrypt-Middleware
-    API_MIDDLEWARE_URL: 'https://d2ijw202als7c.ezdemo.xyz',
+    API_MIDDLEWARE_URL: 'https://api.pandan.club',
 
     // 中间件加密KEY必须是16位的16进制字符串，必须和中间件key保持一致 在线生成地址 https://www.bejson.com/math/hex_gen/
     API_MIDDLEWARE_KEY: '4c6f8e5f9467dc71',
@@ -350,7 +354,10 @@ export const config = {
     },
 
     // 授权的前端域名列表 (新增)
-    AUTHORIZED_DOMAINS: [],
+    AUTHORIZED_DOMAINS: [
+        "test.eztheme.test",
+        "test1.eztheme.test",
+    ],
 
     // 验证码配置
     CAPTCHA_CONFIG: {
