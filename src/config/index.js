@@ -7,7 +7,7 @@ import { buyConfirm, getAppLink, getThemeColor, shopPopup, ticketPopup, userKnow
 
 export const config = {
     // 面板类型配置 - 请选择您使用的面板类型
-    PANEL_TYPE: 'Xboard', // 可选值: 'V2board', 'Xiao-V2board' 或 'Xboard'
+    PANEL_TYPE: 'Xiao-V2board', // 可选值: 'V2board', 'Xiao-V2board' 或 'Xboard'
     // 说明:
     // 1. V2board: 标准V2board面板，使用默认请求格式
     // 2. Xiao-V2board: Xiao修改版面板，使用特殊格式的请求参数
@@ -67,8 +67,8 @@ export const config = {
 
     // ====================  网站基础配置  ====================
     SITE_CONFIG: {
-        siteName: 'EZ-THEME-R',
-        siteDescription: 'EZ-THEME-R is best!',
+        siteName: 'Panda Link',
+        siteDescription: 'Panda Link!',
         // copyright会自动使用当前年份
         copyright: `© ${new Date().getFullYear()} EZ-THEME-R. All Rights Reserved.`,
 
@@ -90,7 +90,7 @@ export const config = {
         // 自定义landing页面路径（相对于public目录
         // 例如：'testlandingpage.html'
         // 如果为空则不启用自定义landing页面
-        customLandingPage: ''
+        customLandingPage: 'landing'
     },
 
     // 默认语言和主题配置
@@ -105,7 +105,7 @@ export const config = {
         primaryColor: getThemeColor(),
 
         // 是否启用落地页 (true=启用, false=禁用)
-        enableLandingPage: false // 默认启用
+        enableLandingPage: true // 默认启用
     },
 
     // 认证页面功能配置
@@ -184,7 +184,7 @@ export const config = {
         autoSelectMaxPeriod: false, // 默认关闭
 
         // 是否隐藏周期选择标签 (true=隐藏, false=显示)
-        hidePeriodTabs: false, // 默认显示周期选择标签
+        hidePeriodTabs: true, // 默认显示周期选择标签
 
         // 库存紧张的阈值（当库存数量小于等于此值且大于0时显示库存紧张）
         lowStockThreshold: 5,
@@ -234,10 +234,10 @@ export const config = {
     // 仪表盘页面配置
     DASHBOARD_CONFIG: {
         // 是否在欢迎卡片中显示用户邮箱 (true=显示, false=隐藏)
-        showUserEmail: false,
+        showUserEmail: true,
 
         // 是否为导入订阅按钮添加高光效果和填充底色 (true=添加效果, false=不添加效果)
-        importButtonHighlightBtnbgcolor: false,
+        importButtonHighlightBtnbgcolor: true,
 
         // ===============================
 
@@ -273,7 +273,7 @@ export const config = {
     // 客户端下载配置
     CLIENT_CONFIG: {
         // 整个下载卡片显示控制
-        showDownloadCard: true,
+        showDownloadCard: false,
 
         // 平台显示控制 (true=显示, false=隐藏)
         showIOS: true,
@@ -339,7 +339,7 @@ export const config = {
     // 用户中心页面配置
     PROFILE_CONFIG: {
         // 是否显示礼品卡兑换栏目 (true=显示, false=隐藏)
-        showGiftCardRedeem: false, // 只有Xiao-V2board支持礼品卡兑换
+        showGiftCardRedeem: true, // 只有Xiao-V2board支持礼品卡兑换
 
         // 是否显示最近登录设备栏目 (true=显示, false=隐藏)
         showRecentDevices: true
@@ -539,7 +539,7 @@ export const config = {
     // 客服系统配置
     CUSTOMER_SERVICE_CONFIG: {
         // 是否启用客服系统
-        enabled: true,
+        enabled: false,
 
         // 客服系统类型: 'crisp' 或 'other'
         // 注意：当客服类型为crisp时，系统会自动向Crisp传递用户数据
@@ -555,7 +555,7 @@ export const config = {
         embedMode: 'embed',
 
         // 是否在未登录状态下也显示客服图标
-        showWhenNotLoggedIn: true,
+        showWhenNotLoggedIn: false,
 
         // 图标位置配置
         iconPosition: {
@@ -614,6 +614,14 @@ export const config = {
                 id: 'telegram',
                 title: 'Telegram',
                 description: '加入我们的Telegram频道',
+                svgIcon: '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg>',
+                url: 'https://t.me/+M1A9z_HOCT5hOWI5',
+                openInNewTab: true
+            },
+              {
+                id: 'PandaLink商店',
+                title: 'PandaLink商店',
+                description: '推特 电报等账号',
                 svgIcon: '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg>',
                 url: 'https://t.me/+M1A9z_HOCT5hOWI5',
                 openInNewTab: true
