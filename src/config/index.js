@@ -68,9 +68,9 @@ export const config = {
     // ====================  网站基础配置  ====================
     SITE_CONFIG: {
         siteName: 'Panda Link',
-        siteDescription: 'Panda Link!',
+        siteDescription: 'Panda Link',
         // copyright会自动使用当前年份
-        copyright: `© ${new Date().getFullYear()} EZ-THEME-R. All Rights Reserved.`,
+        copyright: `© ${new Date().getFullYear()} Panda Link. All Rights Reserved.`,
 
         // 是否显示标题中的网站Logo (true=显示, false=隐藏)
         showLogo: true,
@@ -90,7 +90,7 @@ export const config = {
         // 自定义landing页面路径（相对于public目录
         // 例如：'testlandingpage.html'
         // 如果为空则不启用自定义landing页面
-        customLandingPage: 'landing'
+        customLandingPage: 'landingpage.html'
     },
 
     // 默认语言和主题配置
